@@ -1,6 +1,3 @@
-console.log('client side script is loaded')
-
-
 const weatherForm = document.querySelector('form')     //reference of the form
 const inputBox = document.querySelector('input')        //reference of the textbox
 const messageOne = document.querySelector('#message-1')
