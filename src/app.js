@@ -38,7 +38,7 @@ app.get('/about',(req,res)=>{
 app.get('/help',(req,res)=>{
     res.render('help',{
         title:'Help',
-        info: 'Help from the dynamic hbs view engine',
+        info: 'if in case need any help contact/wtsap on following 8586804868',
         name:'Ayush Singh'
     })
 })
@@ -54,14 +54,16 @@ app.get('/weather',(req,res) => {
     if(error)
     return res.send({error})
 
-    forecast(latitude,longitude, (errorForecast,forecastData)=>{
+    forecast(latitude,longitude, (errorForecast,forecastData,wind_humidity)=>{
 
         if(error)
         return res.send({errorForecast})
 
         res.send({
             place:place_name,
-            forecast:forecastData
+            forecast:forecastData,
+            windSpeed:wind_humidity.windspeed,
+            humidity:wind_humidity.humidity
         })
     })
    })

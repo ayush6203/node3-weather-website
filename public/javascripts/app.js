@@ -19,8 +19,10 @@ fetch(queryStringg).then((response)=>{
     }
         else
         {
+            console.log(data)
             messageOne.textContent = data.place
-            messageTwo.textContent = data.forecast
+            messageTwo.textContent = data.forecast +" Wind Speed is "+data.windSpeed +" with humidity of "+data.humidity
+
         }
     })
     })
