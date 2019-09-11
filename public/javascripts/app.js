@@ -9,7 +9,7 @@ e.preventDefault()      //prevent form to submit
 messageOne.textContent = 'loading'
 var location = inputBox.value;
 inputBox.value = ''
-var queryStringg = 'http://localhost:3000/weather?address='+location
+var queryStringg = '/weather?address='+location
 
 fetch(queryStringg).then((response)=>{
     response.json().then((data)=>{

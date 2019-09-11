@@ -8,6 +8,7 @@ const publicDirectory = path.join(__dirname,'../public')    // __dirname ~ gives
 const viewsPath = path.join(__dirname, '../templates/views')     // setting path for views
 const partialviewspath = path.join(__dirname,'../templates/partialviews')     //setting path for partial views
 const app = express()
+const port = process.env.PORT || 3000
 
 
 app.use(express.static(publicDirectory));     //refrencing the path to the node application
@@ -81,6 +82,6 @@ app.get('*',(req,res)=>{
         name: 'Ayush Singh'})
 })
 
-app.listen(3000, () => {
-    console.log('listening on port 3000')
+app.listen(port, () => {
+    console.log('listening on port '+port)
 })
